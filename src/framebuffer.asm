@@ -1,7 +1,7 @@
 ;-------------------------------------
 ; Fundamentos de arquitectura de computadoras
 ; Inteface Basica con Windows
-; PHREDA - FASTA 2025
+; PHREDA
 ;-------------------------------------
 format PE GUI 4.0
 entry start

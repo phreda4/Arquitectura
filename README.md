@@ -7,6 +7,8 @@ FLATASSEMBLER - Open source assemply language compiler.
 
 https://flatassembler.net/
 
+descomprimir en una carpeta, para no tener problemas con los path, poner los ejemplos en el mismo lugar o cambiar los path de los include.
+
 x64dbg - An open-source x64/x32 debugger for windows.
 
 https://x64dbg.com/
