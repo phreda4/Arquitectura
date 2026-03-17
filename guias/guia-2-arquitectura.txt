@@ -1,0 +1,155 @@
+Arquitectura de computadoras.
+-----------------------------
+
+Práctico 2 - Universidad FASTA
+
+
+1. Escriba un programa que ingrese por teclado una cadena de caracteres (string) terminada en el byte 0 e imprima su longitud.
+
+2. Escriba una rutina que retorne -1 0 o 1 si un string es menor, igual o mayor a otro.
+Compruebe su funcionamiento ingresando dos cadenas y luego imprimalas ordenadas.
+
+3. Escriba un programa que pida un numero "n" e imprima un "diamante" de este tamaño hecho con asteriscos.
+
+	por ejemplo:
+	para n=1 el resultado es
+
+       *
+      ***
+       *
+
+	para n=2 el resultado es
+
+        *
+       ***
+      *****
+       ***
+        *
+
+
+4. Escriba una rutina y un programa que decida si una palabra es palindrome.
+
+	Ejemplo
+
+      1234k4321   es palindrome.
+      5665        es palindrome.
+
+      za1221at    not es palindrome.
+
+
+5. Escriba el codigo para intercambiar las mayusculas y minusculas de un string,
+asuma que la cadena solo tiene letras, revise el codigo ASCII para encontrar alguna optimizacion en el calculo.
+
+
+6. Escriba el codigo para encontrar el caracter mas numeroso en una cadena de caracteres sin contar los espacios.
+Imprima dicho caracter con la cantidad de ocurrencias.
+
+
+7. Escriba el codigo para buscar un substring en un string. Tiene que retornar la/s posiciones donde encuentra el substring.
+
+8. Escriba un programa que ingrese un string que signifique un numero en hexa, lo convierta a numero y lo imprima como numero decimal
+sin utilizar las rutinas de C, fscanf ni printf, solamente imprimiendo caracteres
+
+	Ejemplo
+      Entrada:  1f23
+      Salida: 7971
+
+9. Dibujo ASCII
+
+	Dado un entero de 32 bits "x" dibuje segun el siguiente procedimiento.
+
+    a. Observe en la representacion binaria de X, dividalo en pares de bits y ordene estos pares en un cuadrado de 4x4
+
+        Ejemplo:
+          para el dword 0xdeadbeef, obtenemos:
+          0xdeadbeef = 11011110101011011011111011101111
+          0xdeadbeef = 11 01 11 10 10 10 11 01 10 11 11 10 11 10 11 11
+
+          ordenados en cuadrado:
+
+          11 01 11 10
+          10 10 11 01
+          10 11 11 10
+          11 10 11 11
+
+    b.  Convierta cada par de bit en un simbolo ASCII:
+
+        00 ->
+        01 -> :
+        10 -> #
+        11 -> @
+
+        Ejemplo:
+          para el  dword 0xdeadbeef, se otiene el siguiente dibujo
+
+          @:@#
+          ##@:
+          #@@#
+          @#@@
+
+	Escriba un programa que reciba un entero X y dibuje en ACII por pantalla la representacion
+
+	Organice su programa usando funciones o subrutinas.
+
+	- Haga un funcion que transforme un numero en el codigo ASCII correspondiente
+        {0 ->   , 1 -> : , 2 -> # , 3 -> @}
+
+	- Haga un funcion que tome como argumento una direccion de un buffer y un numero x
+	Esta funcion llena el buffer con el ascii correspondiente.
+	Acuerdese de dejar lugar para el caracter de retorno de carro y el final del
+	string con 0
+
+	- Finalmente pida el numero al usuario y dibuje por pantalla el grafico ASCII correspondiente
+
+10.  La Transformacion ROT13 es un metodo simple de encriptacion, funciona de la siguiente manera:
+	Se disponen los caracteres alfabeticos en un circulo numerado, por cada caracter a codificar,
+	se transforma en la letra que esta 13 lugares en la direccion de las agujas del reloj.
+
+    Ejemplo:
+      ROT13(a) = n
+      ROT13(b) = o
+      ROT13(p) = c
+      ROT13(c) = p
+
+	Note que existe la transformacion inversa que es contar los 13 lugares pero en la direccion
+	contraria a las agujas del reloj.
+	Estas dos funciones permiten codificar y decodificar textos
+
+    Ejemplo:
+      'Somebody set up us the bomb.' -> 'Fbzrobql frg hc hf gur obzo.'
+      'Fbzrobql frg hc hf gur obzo.' -> 'Somebody set up us the bomb.'
+
+    a.	Escriba una funcion que realize la transformacion ROT13, y su inversa IROT13,
+		Agrege en esta funcion la comprobacion que el caracter a codificar se encuentre
+		dentro de la "rueda" de caracteres, si no esta entre los codificados, que retorne
+		el mismo ingresado.
+
+    b.	Escriba la funcion que transforma un string en otro string codificado.
+
+    c.	Escriba la funcion que transforma un string en otro string codificado con el inverso.
+
+	Escriba el programa que pida el String, lo codifique , lo muestre, lo decodifique y lo muestre.
+
+11. Contar los primos.
+	Escriba un programam para saber cuantos numeros primos hay entre 1 y n.
+	Recuerde que un numero primo es un entero positivo que solamente es divisible por 1 y por
+	el mismo.
+	Los primeros numeros primos son 2,3,5,7,11,13. (1 no es primo).
+
+	Factorice el problema en dos subproblemas:
+
+    a. Escriba la funcion que dado el numero x, retorne eax=1 si es primo o eax=0 en caso contrario.
+
+    b. Escriba la funcion que dado N, calcule la cantidad de primos entre 1 y N utilizando la funcion anterior.
+
+	Finalmente pregunte el numero al usuario y utilice la ultima funcion para calcular el numero de primos.
+
+12.  Escriba un programa que obtenga la direccion de memoria donde se esta ejecutando el programa
+	"EIP" e imprimalo en la consola
+
+    Ayuda: Use CALL.
+
+
+13. Dada una cadena terminada en cero, invierte el orden de sus caracteres en el mismo buffer de memoria, sin usar un segundo buffer auxiliar.
+
+14. Escribe una rutina que elimine los espacios iniciales y finales de una cadena, desplazando el contenido según sea necesario para que la cadena resultante siga terminada en cero.

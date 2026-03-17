@@ -1,0 +1,36 @@
+Arquitectura de computadoras.
+-----------------------------
+
+Práctico 3 - Universidad FASTA
+
+
+1. Realizar un pintado total de la ventana con el un color determinado por el teclado, 
+	si se oprime 1 pintar de negro, con 2 pintar de rojo, con 3 pintar de verde y con 4 pintar con azul
+
+2. Realizar el pintado total de la ventana pero ahora “activando” el color rojo, verde y azul 
+	con 1 2 y 3 respectivamente, los colores tiene que aparecer mezclados.
+
+3. Hacer una funcion que dibuje una linea horizontal pasandole como parámetros 
+	el x e y de inicio, la cantidad de pixels y el color
+
+4. Hacer una funcion que dibuje un rectangulo relleno con un color determinado 
+	pasandole como parámetros las coordenadas de los extremos y el color a pintar
+
+5. Hacer un programa que inicialmente limpie y pantalla, y luego, 
+	dibuje un punto donde se encuentra el cursor del raton, sin borrar la pantalla para que quede el trazo.
+
+6. Agregar al programa anterior la capacidad de guardar la ventana grafica 
+	en un archivo cuando sale y cargar la ventana cuando entra
+
+7. Definir una estructura para guardar un dibujo de 8x8 pixels con colores de 32 bits, 
+	mostrar este dibujo por pantalla
+
+8. Definir una estructura para guardar un dibujo de 16x16 pixels pero definiendo cada píxel como un valor de 8 bits, 
+	este valor de 8 bits sera convertido a 32 bits mediante una palete definida.
+
+9. Buscar en Internet el formato de archivos BMP y realizar un programa que cargue un BMP de 24 bits y lo muestre por pantalla.
+
+10. Dados dos colores de 32 bits (ARGB) en eax y ebx, calcula el color resultante de mezclarlos al 50% de opacidad. Luego calcula segun un factor (de 0 a 255). Luego dibuja un rectangulo con gradiente usando este factor.
+
+11. Avanzado. Codifica el algoritmo de dibujo de círculos de Bresenham.
+

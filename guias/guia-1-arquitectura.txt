@@ -1,0 +1,158 @@
+Arquitectura de computadoras.
+-----------------------------
+
+Práctico 1 - Universidad FASTA
+
+
+1.	Dados los siguente valores en los registros indicados eax = 0x00000011 , ebx = 0x1234ABCD , ecx = 0x5151DEAD
+	Calcular el valor final de eax,ebx y ecx despues de la ejecucion de las siguientes instrucciones
+
+    mov   ah,5Bh
+    mov   cx,0BEEFh
+    mov   ebx,ecx
+    mov   ah,bl
+
+
+2.  El valor inicial de eax es 0x1. Cual es el valor de eax despues de ejecutar las siguientes instrucciones ?
+
+    add   eax,1
+    add   eax,eax
+    add   eax,eax
+
+
+3.  El valor inicial de eax es 0x5. Cual es el valor de eax despues de ejecutar las siguientes instrucciones ?
+
+    mov   ecx,eax
+    add   ecx,ecx
+    add   ecx,eax
+    add   ecx,3h
+    mov   eax,ecx
+
+
+4.  Que hace la siguiente secuencia de intrucciones asumiendo que el valor de entrada esta en eax y el valor de salida tambien es eax?
+
+    mov   edx,eax
+    add   edx,edx
+    add   edx,edx
+    add   edx,edx
+    sub   edx,eax
+    mov   eax,edx
+
+5.  Asuma que los registros eax,ebx,ecx tienen los valores cargados. Escriba el codigo que suma estos valores en edx.
+
+6.  Escriba el codigo necesario para que el valor que se encuentra en AL (8 bits) sea copiado a EDX.
+	Ejemplo: si eax = 0x153BCF19. el valor de edx sera edx = 0x00000019.
+
+7.  Sea eax = 0x1, es posible poner eax en 0 utilizando solo la instruccion ADD?
+
+8.  Sea eax = 0x3. Cual es el valor de eax desdpues de ejecutarse el siguiente codigo?
+
+    inc   eax
+    dec   eax
+    inc   eax
+    inc   eax
+
+Codifique los siguientes ejercicios
+
+9. Leer un número desde el teclado, y escribir 0 si el número es par o 1 si es impar.
+
+10. Leer un número desde el teclado, y escribir 0 si el número es positivo o 1 si es negativo.
+
+11. Leer un número desde el teclado, y escribir 0 si tiene cantidad par de unos y 1 en caso contrario.
+
+12. Leer dos números desde teclado, el primero representa un valor decimal y el segundo un bit en particular de ese valor. 
+Escribir por pantalla el valor del bit indicado, se debe validar que el segundo valor se encuentre dentro del rango de 1 a 32, en caso contrario se debe escribir cero.
+
+13. Leer un número desde el teclado, y escribir los 32 bits de su equivalente en binario. Los bits deben mostrarse desde el MSB al LSB.
+Ej: si se ingresa 8 la salida será
+      00000000000000000000000000001000
+
+14. Ídem ejercicio anterior pero mostrando los bits desde el LSB al MSB.
+
+15. Leer una lista de ceros o unos por teclado, que representan un valor binario ingresado desde el LSB al MSB y escribir su equivalente en decimal. 
+El fin de lista se indica con un número distinto de cero o uno.
+Ej:si se ingresa la siguiente lista
+? 0
+? 0
+? 0
+? 1
+? 2
+	El resultado debe ser:
+8
+
+16. Leer dos números desde teclado, el primero representa un valor decimal y el segundo la cantidad de bits a correrlo a la derecha. Escribir por pantalla el resultados, hacer dos versiones: utilizando el desplazamiento con registro "cl" y utilizando un bucle para realizar el desplazamiento.
+
+17. Dados 2 valores en eax y ecx. Escriba el codigo para obtener en eax el calculo
+ 5*eax+3*ecx+1.
+
+18. Puede calcular  eax * eax (eax veces eax) usando solo las instrucciones MOV,ADD,SUB ? Codifiquelo.
+
+19. Leer una lista de números naturales y escribir su promedio. El fin de la lista se indica con un número negativo.
+
+
+20.  Sean edx = 0x17, eax = 0x3, esi=0x7 indique que valores tienen despues de la siguiente secuencia de instrucciones
+
+    mul   esi
+    mul   esi
+    mul   si
+
+21.  Sean edx = 0x0, eax = 0x1A, ecx = 0x3 indique que valores tienen despues de la siguiente secuencia de instrucciones
+
+    div   ecx
+
+22.  Sean edx = 0x0, eax=0xAAD, ecx = 0x0,  cual es el resultado de la siguiente instruccion?
+
+    div   cx
+
+    por que?
+
+
+23.  Lea el codigo y responda a la pregunta
+
+  23.1   que hace este codigo?
+
+        mov   ecx,eax
+        mul   ecx
+	
+
+  23.2  que hace este codigo (entrada: eax, salida: eax)?
+
+        mov   ecx,eax
+        mul   ecx
+        mov   esi,eax
+        add   ecx,ecx
+        add   esi,ecx
+        inc   esi
+        mov   eax,esi
+
+        - Se puede hacer con menos instrucciones ?
+        - Que pasa cuando eax es muy grande ?
+
+  23.3   que hace este codigo (entrada: eax, salida: eax)?
+
+        mov   ecx,eax
+        inc   eax
+        dec   ecx
+        mul   ecx
+
+24.
+  24.1   Escriba el codigo para multiplicar los numeros 1,2,3,4,5 y guarde el resultado en eax.
+
+  24.2   Escriba el codigo para multiplicar los numeros 1,2,...,10 y guarde el resultado en eax.
+
+
+25.  Dado tres valore eax=a, ebx=b, ecx=c. Escriba el codigo para calcular el promedio entero (a+b+c)/3 y guardelo en eax.
+
+
+26. Sean eax=a, ebx=b. Calcule (a^3)*b + 5*(b^2) en eax. a^b es la potencia b de a.
+
+27. Dado un valor con signo en eax, conviértelo a su valor absoluto sin usar instrucciones de salto (jcc)
+
+28. Realiza la suma de eax y ebx, pero si el resultado supera 0xFFFFFFFF, el valor debe quedar "trabado" en el máximo (0xFFFFFFFF) en lugar de dar la vuelta (overflow)
+
+29. Dado un número en eax, cuenta cuántos bits están encendidos (en 1).
+
+
+
+
+
