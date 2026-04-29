@@ -43,12 +43,13 @@ main:
 
 section '.data' data readable writeable
 
+n             dd ?
 n1            dd ?
 n2            dd ?
 
 _p		db "n:",0
 _dec	db "%d",0
-
+_str	db "<enter> para continuar",0
 
 section '.idata' data import readable
 
